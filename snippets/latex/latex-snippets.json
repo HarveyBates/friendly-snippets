@@ -1,4 +1,9 @@
 {
+    "Text": {
+        "prefix": "tx",
+        "body": ["\\text{$1}"],
+        "decription": "Add text to math"
+    },
     "Align(ed)": {
         "prefix": "ali",
         "body": ["\\begin{align}", "\t$0", "\\end{align}"],

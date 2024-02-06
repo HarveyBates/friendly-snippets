@@ -4,6 +4,11 @@
         "body": ["\\text{$1}"],
         "decription": "Add text to math"
     },
+    "InlineFraction": {
+        "prefix": "fr",
+        "body": ["\\frac{$1}{$2}"],
+        "decription": "Inline fraction"
+    },
     "Align(ed)": {
         "prefix": "ali",
         "body": ["\\begin{align}", "\t$0", "\\end{align}"],

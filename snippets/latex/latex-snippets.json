@@ -110,51 +110,6 @@
         ],
         "description": "Add a proof"
     },
-    "Algorithm": {
-        "prefix": "algo",
-        "body": [
-            "% \\usepackage{algorithm,algorithmicx,algpseudocode}",
-            "\\begin{algorithm}",
-            "\t\\floatname{algorithm}{${1:Algorithm}}",
-            "\t\\algrenewcommand\\algorithmicrequire{\\textbf{${2:Input: }}}",
-            "\t\\algrenewcommand\\algorithmicensure{\\textbf{${3:Output: }}}",
-            "\t\\caption{$4}\\label{alg:$5}",
-            "\t\\begin{algorithmic}[1]",
-            "\t\t\\Require \\$input\\$",
-            "\t\t\\Ensure \\$output\\$",
-            "\t\t$6",
-            "\t\t\\State \\textbf{return} \\$state\\$",
-            "\t\\end{algorithmic}",
-            "\\end{algorithm}",
-            "$0"
-        ],
-        "description": "Add an algorithm"
-    },
-    "Algorithm:State": {
-        "prefix": "state",
-        "body": ["\\State $1"],
-        "desciption": "Add an statement of algorithm"
-    },
-    "Algorithm:If": {
-        "prefix": "if",
-        "body": ["\\If{$1}", "\\ElsIf{$2}", "\\Else", "\\EndIf"],
-        "desciption": "Add an if statement of algorithm"
-    },
-    "Algorithm:For": {
-        "prefix": "for",
-        "body": ["\\For{i=0:$1}", "\t\\State $0", "\\EndFor"],
-        "desciption": "Add an for statement of algorithm"
-    },
-    "Algorithm:While": {
-        "prefix": "while",
-        "body": ["\\While{$1}", "\t\\State $0", "\\EndWhile"],
-        "desciption": "Add an for statement of algorithm"
-    },
-    "Algorithm:Ref": {
-        "prefix": "algo:ref",
-        "body": ["${1:Algorithm}~\\ref{algo:$2}$0"],
-        "desciption": "Ref for Algorithm"
-    },
     "Figure:Ref": {
         "prefix": "figure:ref",
         "body": ["${1:Figure}~\\ref{fig:$2}$0"],
@@ -169,11 +124,6 @@
         "prefix": "item",
         "body": ["\\\\begin{itemize}", "\t\\item $0", "\\\\end{itemize}"],
         "description": "Itemize"
-    },
-    "Listing:Ref": {
-        "prefix": "listing:ref",
-        "body": ["${1:Listing}~\\ref{lst:$2}$0"],
-        "description": "Listing"
     },
     "Matrix": {
         "prefix": "mat",
@@ -297,35 +247,13 @@
         "body": [
             "\\begin{figure}",
             "\t\\begin{center}",
-            "\t\t\\includegraphics[width=0.95\\textwidth]{figures/$1}",
+            "\t\t\\includegraphics[width=0.45\\textwidth]{$1}",
             "\t\\end{center}",
-            "\t\\caption{$3}\\label{fig:$4}",
+            "\t\\caption{$3}",
             "\\end{figure}",
             "$0"
         ],
         "description": "Add a figure"
-    },
-    "Figure:ACM": {
-        "prefix": "figure:acm",
-        "body": [
-            "\\begin{figure}",
-            "\t\\includegraphics[width=0.45\\textwidth]{figures/$1}",
-            "\t\\caption{$2}\\label{fig:$3}",
-            "\\end{figure}",
-            "$0"
-        ],
-        "description": "Add a figure (ACM)"
-    },
-    "Figure:ACM:*": {
-        "prefix": "figure:acm:*",
-        "body": [
-            "\\begin{figure*}",
-            "\t\\includegraphics[width=0.45\\textwidth]{figures/$1}",
-            "\t\\caption{$2}\\label{fig:$3}",
-            "\\end{figure*}",
-            "$0"
-        ],
-        "description": "Add a figure (ACM)"
     },
     "Table": {
         "prefix": "table",
@@ -348,42 +276,6 @@
             "$0"
         ],
         "description": "Add a table"
-    },
-    "Table:ACM": {
-        "prefix": "table:acm",
-        "body": [
-            "\\begin{table}",
-            "\t\\caption{$1}\\label{tab:$2}",
-            "\t\\begin{tabular}{${3:ccl}}",
-            "\t\t\\toprule",
-            "\t\t$4",
-            "\t\ta & b & c \\\\\\\\",
-            "\t\t\\midrule",
-            "\t\td & e & f \\\\\\\\",
-            "\t\t\\bottomrule",
-            "\t\\end{tabular}",
-            "\\end{table}",
-            "$0"
-        ],
-        "description": "Add a table (ACM)"
-    },
-    "Table:ACM:*": {
-        "prefix": "table:acm:*",
-        "body": [
-            "\\begin{table*}",
-            "\t\\caption{$1}\\label{tab:$2}",
-            "\t\\begin{tabular}{${3:ccl}}",
-            "\t\t\\toprule",
-            "\t\t$4",
-            "\t\ta & b & c \\\\\\\\",
-            "\t\t\\midrule",
-            "\t\td & e & f \\\\\\\\",
-            "\t\t\\bottomrule",
-            "\t\\end{tabular}",
-            "\\end{table*}",
-            "$0"
-        ],
-        "description": "Add a table (ACM)"
     },
     "Enumerate": {
         "prefix": "enumerate",
